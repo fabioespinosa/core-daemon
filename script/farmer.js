@@ -44,7 +44,7 @@ if (config.S3 && config.S3.enabled) {
   );
 } else {
   config.storageManager = new storj.StorageManager(
-    new storj.EmbeddedStorageAdapter(config.storagePath),
+    new storj.FileStorageAdapter(config.storagePath),
     {
       maxCapacity: spaceAllocation,
       logger: config.logger
